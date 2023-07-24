@@ -92,7 +92,6 @@
   transform: translateX(-10px);
   opacity: 0;
   pointer-events: none;
-  
 }
 
 .navMobileActive {
@@ -101,7 +100,6 @@
   opacity: 1;
   pointer-events: initial;
   z-index: 100;
-  border-color: red;
 }
 
 .navMobile a,
@@ -114,8 +112,6 @@
   border-bottom: 1px solid #eee;
   padding: 0.5rem 0;
   cursor: pointer;
- 
-
 }
 
 .navMobile a:hover svg > *,
