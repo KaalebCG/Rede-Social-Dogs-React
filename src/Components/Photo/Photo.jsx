@@ -5,6 +5,7 @@ import { PHOTOS_GETT } from "../../services/api";
 import { Error } from "../Helper/Error";
 import { Loading } from "../Helper/Loading";
 import { PhotoContent } from "../Photo/PhotoContent";
+import { Head } from "../Helper/Head";
 
 export const Photo = () => {
   const { id } = useParams();
@@ -20,6 +21,7 @@ export const Photo = () => {
   if (data)
     return (
       <section className="container mainContainer">
+          <Head title={data.photo.title} description="Aba para postar suas fotos" />
         <PhotoContent single={true} data={data} />
       </section>
     );
