@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./UserStatsGraphs.module.css";
 import { VictoryPie, VictoryChart, VictoryBar } from "victory";
 
-export const UserStatsGraphs = ({ data }) => {
+const UserStatsGraphs = ({ data }) => {
   const [graph, setGraph] = React.useState([]);
   const [total, setTotal] = React.useState(0);
 
@@ -21,8 +21,8 @@ export const UserStatsGraphs = ({ data }) => {
   }, [data]);
 
   return (
-    <section className={`animeLeft ${styles.graph}`}>
-      <div className={`animeLeft ${styles.total} ${styles.graphItem}`}>
+    <section className={`${styles.graph} animeLeft`}>
+      <div className={`${styles.total} ${styles.graphItem}`}>
         <p>Acessos: {total}</p>
       </div>
       <div className={styles.graphItem}>
@@ -36,7 +36,7 @@ export const UserStatsGraphs = ({ data }) => {
               stroke: "#fff",
               strokeWidth: 2,
             },
-            label: {
+            labels: {
               fontSize: 14,
               fill: "#333",
             },
@@ -51,3 +51,5 @@ export const UserStatsGraphs = ({ data }) => {
     </section>
   );
 };
+
+export default UserStatsGraphs;
